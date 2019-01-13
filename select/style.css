@@ -1,0 +1,11 @@
+.select {
+    position: relative;
+    align-content: center;
+    margin: 20px;
+}
+
+.output {
+    margin-left: 20px;
+    color: blue;
+    font-weight: bold; 
+}

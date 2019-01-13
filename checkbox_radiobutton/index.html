@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkbox/Radio</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" id="one" onchange="checkBoxTestFirst()">
+    <div>
+        <input class="radio" type="radio" name="radio-first-group" value="1" onchange="radioTestFirst()"> Fisrt
+        <input class="radio" type="radio" name="radio-first-group" value="2" onchange="radioTestFirst()"> Second
+        <input class="radio" type="radio" name="radio-first-group" value="3" onchange="radioTestFirst()"> Third
+        <input class="radio" type="radio" name="radio-first-group" value="4" onchange="radioTestFirst()"> Fourth
+        <button onclick="radioChecker()">Check radio button active</button>
+    </div>
+    <div id='radio-answer'></div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

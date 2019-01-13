@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <select class="select" name="fruits" id="fruits-list" onchange="selectFruit()">
+        <option value="1">Apple</option>
+        <option value="2">Banana</option>
+        <option value="5">Orange</option>
+        <option value="4">Mango</option>
+        <option value="3">Kiwi</option>
+        <option value="6">Pineapple</option>
+    </select>
+    <div name="output" class="output"></div>
+
+    <input type="range" name="" id="range-first" min="0" max="100" step="5" oninput="rangeEvent()">
+    <script src="./script.js"></script>    
+</body>
+</html>
