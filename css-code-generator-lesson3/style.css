@@ -1,0 +1,15 @@
+.ctrl-block {
+    margin: 20px;
+}
+
+p {
+    margin: 10px 0 0 20px;
+}
+
+.view-block {
+    margin: 20px;
+    border: 2px solid rgb(3, 238, 255);
+    width: 320px;
+    height: 240px;
+    background-color: aquamarine;
+}
