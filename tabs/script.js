@@ -1,37 +1,35 @@
-let tab;
-let tabContent;
-
 window.onload = () => {
-    tabContent = document.getElementsByClassName('tab-content');
-    tab = document.getElementsByClassName('tab');
-    hideTabsContent(1);
+    hideTabsContent(); 
 }
 
-function hideTabsContent(value) {
-    for (let index = value; index < tabContent.length; index++) {
-        tabContent[index].classList.remove('show');
-        tabContent[index].classList.add('hide');
-        tab[index].classList.remove('white-border');
-    }
-}
-
-document.getElementById('tabs').onclick = (event) => {
+function openTab(event) {
     const target = event.target;
-    if (target.className === 'tab') {
-        for (let index = 0; index < tab.length; index++) {
-            if (target === tab[index]) {
-                showTabsContent(index);
-                break;
-            }
+    const tabs = document.getElementsByClassName('tab');
+    hideTabsContent();
+    for (let index = 0; index < tabs.length; index++) {
+        tabs[index].classList.remove('white-border');
+        if (target.id === tabs[index].id) {
+            tabs[index].classList.add('white-border');
+            showTabContent(index);
         }
     }
 }
 
-function showTabsContent(value) {
-    if (tabContent[value].classList.contains('hide')) {
-        hideTabsContent(0);
-        tab[value].classList.add('white-border');
-        tabContent[value].classList.remove('hide');
-        tabContent[value].classList.add('show');
+
+function hideTabsContent() {
+    const tabContent = document.getElementsByClassName('tab-content');
+    for (let index = 0; index < tabContent.length; index++) {
+        tabContent[index].classList.remove('show');
+        tabContent[index].classList.add('hide');
+    }
+}
+
+function showTabContent(activeTab) {
+    const tabContent = document.getElementsByClassName('tab-content');
+    for (let index = 0; index < tabContent.length; index++) {
+        if (activeTab === index) {
+            tabContent[index].classList.remove('hide');
+            tabContent[index].classList.add('show');
+        }
     }
 }
