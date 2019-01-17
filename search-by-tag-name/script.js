@@ -1,26 +1,22 @@
-let currentTagElements = [];
-
 function searchByTagName(node, tagName) {
-    
-    if (node.children.length === 0) {
-        return currentTagElements;
-    }
-    for (let index = 0; index < node.children.length; index++) {
-        if (tagName.toLowerCase() === node.children[index].tagName.toLowerCase()) {
-            currentTagElements.push(node.children[index]);
-            console.log(node.children[index]);
+    const currentTagElements = [];
+    const recursiveSearch = (node, tagName) => {
+        if (node.children.length === 0) {
+            return;
         }
-        searchByTagName(node.children[index], tagName);
-    }
+        for (let index = 0; index < node.children.length; index++) {
+            if (tagName.toLowerCase() === node.children[index].tagName.toLowerCase()) {
+                currentTagElements.push(node.children[index]);
+            }
+            recursiveSearch(node.children[index], tagName);
+        }
+    };
+    recursiveSearch(node, tagName);
+    return currentTagElements;
 }
 
-searchByTagName(document.body, 'div');
-currentTagElements = [];
-searchByTagName(document.body, 'h1');
-currentTagElements = [];
-searchByTagName(document.body, 'span');
-currentTagElements = [];
-searchByTagName(document.body, 'table');
-currentTagElements = [];
-searchByTagName(document.body, 'td');
-currentTagElements = [];
+console.log(searchByTagName(document.body, 'div'));
+console.log(searchByTagName(document.body, 'h1'));
+console.log(searchByTagName(document.body, 'span'));
+console.log(searchByTagName(document.body, 'table'));
+console.log(searchByTagName(document.body, 'td'));
