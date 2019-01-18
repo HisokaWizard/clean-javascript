@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Window</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <button id="button-modal-window"
+            style="background: lightskyblue; cursor: pointer; padding: 10px; border: none; box-shadow: -2px 2px 3px lightslategray;"
+            onclick="openModal()">
+        Click and watch!
+    </button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Modal Window!</p>
+            <div>
+                <h1>
+                    Hello, my dear friends!
+                </h1>
+                <p>
+                    I glad to see you everyone!!! Let`s start our fun-party!
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
