@@ -1,0 +1,23 @@
+.button-start-animation {
+    border: none;
+    background: #08485e;
+    color: white;
+    margin: 20px;
+    box-shadow: -3px 3px 5px rgba(122, 74, 12, 0.7), 3px 3px 5px rgba(122, 74, 12, 0.7);
+    padding: 10px;
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+    margin-left: 20px;
+}
+
+#animation {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+}
