@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="my-slides fade">
+            <div class="nubmer-text">1/5</div>
+            <img src="./imgs/1490352584.jpg" style="width: 100%" alt="">
+            <div class="text">Fantastic landscape first</div>
+        </div>
+        <div class="my-slides fade">
+            <div class="nubmer-text">2/5</div>
+            <img src="./imgs/1490353660.jpg" style="width: 100%" alt="">
+            <div class="text">Fantastic landscape first</div>
+        </div>
+        <div class="my-slides fade">
+            <div class="nubmer-text">3/5</div>
+            <img src="./imgs/landscapes-2887796_960_720.jpg" style="width: 100%" alt="">
+            <div class="text">Fantastic landscape first</div>
+        </div>
+        <div class="my-slides fade">
+            <div class="nubmer-text">4/5</div>
+            <img src="./imgs/lead.jpg" style="width: 100%" alt="">
+            <div class="text">Fantastic landscape first</div>
+        </div>
+        <div class="my-slides fade">
+            <div class="nubmer-text">5/5</div>
+            <img src="./imgs/ultra-wide-mistakes-lead-image.jpg" style="width: 100%" alt="">
+            <div class="text">Fantastic landscape first</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(1)">&#10095</a>
+    </div>
+    <br>
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
