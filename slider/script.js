@@ -23,9 +23,10 @@ function showSlides(n) {
     }
 
     for (let i = 0; i < slides.length; i++) {
-        dots[i].className = dots[i].className.replace('active', '');
+        slides[i].style.display = 'none';
+        dots[i].className = dots[i].className.replace(' active', '');
     }
 
-    slides[slideIndex - 1].getElementsByClassName.display = 'block';
-    dots[slideIndex - 1].className += 'active';
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].className += ' active';
 }
