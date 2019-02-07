@@ -1,3 +1,31 @@
 .radio {
     margin: 15px;
 }
+
+ul li {
+   list-style: none; 
+}
+
+ul li:before {
+    content: '';
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    border-color: var(--paper-radio-button-unchecked-color, --primary-text-color);
+    transition: border-color 0.28s;
+}
+
+ul li.active:before {
+    content: '';
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid;
+    background-color: yellow;
+    border-radius: 50%;
+    border-color: var(--paper-radio-button-unchecked-color, --primary-text-color);
+    transition: border-color 0.28s;
+}

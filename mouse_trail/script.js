@@ -48,7 +48,7 @@ function mouseTrail() {
         stars.forEach(star => {
             const deltaX = Math.abs(star.x - event.clientX);
             const deltaY = Math.abs(star.y - event.clientY);
-            if (deltaX < 50 && deltaY < 50) {
+            if (deltaX < 100 && deltaY < 100) {
                 starsNearMouse.push(star.name);
             }
         });
