@@ -1,0 +1,31 @@
+.accordion {
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background-color: antiquewhite;
+    color: cornflowerblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+.accordion:hover, .accordion:active {
+    background-color: coral;
+}
+
+.panel {
+    visibility: hidden;
+    height: 0;
+    position: relative;
+    margin: 0;
+    border: 1px solid chocolate;
+    border-top: transparent;
+    background-color: burlywood;
+    font-size: 16px;
+    color: darkcyan;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+}
+
