@@ -1,0 +1,90 @@
+.container {
+    width: 100%;
+    text-align: center;
+    background-color: #86b0e6;
+    color: darkblue;
+}
+
+#task-input {
+    margin: 0 10px;
+    width: 500px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+    font-size: 20px;
+    font-style: italic;
+    box-shadow: 0 0 2px 3px aliceblue;
+    border: none;
+    outline: none;
+    background-color: cornflowerblue;
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+#task-input:focus {
+    box-shadow: 0 0 2px 3px darkblue;
+}
+
+.add-task {
+    margin-left: 10px;
+    box-shadow: 0 0 1px 2px aliceblue;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    background-color: cornflowerblue; 
+    color: darkblue;
+    cursor: pointer;
+}
+
+.add-task:active {
+    background-color: aliceblue;
+}
+
+#list {
+    margin: 0;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(51, 199, 199, 0.651);
+    font-size: 20px;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 139, 0.2);
+}
+
+.after-action {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(26, 168, 168, 0.2);
+    font-size: 20px;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 139, 0.2);
+}
+
+.text-task {
+    margin-left: 30px;
+    margin-top: 12px;
+}
+
+.after-action .text-task {
+    text-decoration-line: line-through;
+}
+
+.close{
+    text-align: center;
+    width: 50px;
+    background-color: firebrick;
+    font-size: 42px;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration-line: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 139, 0.5);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightsteelblue;
+}
