@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: darkgoldenrod;
+}
+
+.coord {
+    position: absolute;
+    border:  1px solid blue;
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    background-color: lightblue;
+    text-align: center;
+}

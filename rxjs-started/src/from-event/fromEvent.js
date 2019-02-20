@@ -1,8 +1,9 @@
 import { fromEvent } from 'rxjs';
 import { scan, map } from 'rxjs/operators';
+import '../assets/style.css';
 
 export function screenClicker() {
-    const click = fromEvent(document.body, 'mousemove');
+    const click = fromEvent(document.body, 'click');
     click.pipe(
         map(event => {
             const coord = {
@@ -11,38 +12,31 @@ export function screenClicker() {
             };
             return coord;
         }),
-        scan((count, coord) => {
+        scan(({count}, coord) => {
+            ++count;
             return {
                 count: count,
                 coord: coord
             }
-        } , 0)
+        } , {count: 0})
     )
     .subscribe(result => {
         createObject(result);
-        setTimeout(() => {
-            deleteObjects();
-        }, 100);
+        deleteObjects();
     });
 
     const createObject = (result) => {
         const text = document.createElement('div');
-        text.innerText = `x: ${result.coord.x}, y: ${result.coord.y}`;
-        text.style.position = 'absolute';
+        text.innerText = `x: ${result.coord.x}, y: ${result.coord.y}, click №: ${result.count}`;
         text.style.top = result.coord.y;
         text.style.left = result.coord.x;
-        text.style.border = '1px solid blue';
-        text.style.borderRadius = '10px';
-        text.style.width = '100px';
-        text.style.height = '20px';
-        text.style.backgroundColor = 'lightblue';
-        text.style.textAlign = 'center';
+        text.classList.add('coord');
         document.body.appendChild(text);
     };
 
     const deleteObjects = () => {
         const divElems = document.getElementsByTagName('div');
-        for (let index = 0; index < divElems.length; index++) {
+        for (let index = 0; index < divElems.length - 1; index++) {
             document.body.removeChild(divElems[index]);
         }
     };
