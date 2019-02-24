@@ -11,7 +11,7 @@ module.exports = {
         ignored: ['node_modules']
     },
     mode: 'production',
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
     module: {
       rules: [
         {
