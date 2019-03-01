@@ -10,7 +10,7 @@ import {
     observableBehaviorSubject,
     observableSubscribeAsync,
 } from './subject/subjectExersices';
-
+import { dragAndDrop } from './dragAndDrop/drag-and-drop';
 // screenClicker();
 // observableToObserver();
 // subjectExampleSubscribeCollection();
@@ -20,4 +20,5 @@ import {
 // observableSubjectMyTest();
 // observableReferenceCounting();
 // observableBehaviorSubject();
-observableSubscribeAsync();
+// observableSubscribeAsync();
+dragAndDrop();
