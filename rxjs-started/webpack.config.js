@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -11,15 +12,21 @@ module.exports = {
         ignored: ['node_modules']
     },
     mode: 'production',
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     module: {
       rules: [
         {
           test: /\.css$/,
           use: [
-            'style-loader',
-            'css-loader'
-          ]
+            {
+              loader: 'style-loader',
+              options: { sourceMap: false }
+            },
+            {
+              loader: 'css-loader',
+              options: { sourceMap: false }
+            }
+          ],
         }
       ]
     }
