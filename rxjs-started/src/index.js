@@ -11,6 +11,7 @@ import {
     observableSubscribeAsync,
 } from './subject/subjectExersices';
 import { dragAndDrop } from './dragAndDrop/drag-and-drop';
+import { dragAndDropKefir, div } from './kefir-tests/kefir-test';
 // screenClicker();
 // observableToObserver();
 // subjectExampleSubscribeCollection();
@@ -22,3 +23,4 @@ import { dragAndDrop } from './dragAndDrop/drag-and-drop';
 // observableBehaviorSubject();
 // observableSubscribeAsync();
 dragAndDrop();
+dragAndDropKefir(div);
