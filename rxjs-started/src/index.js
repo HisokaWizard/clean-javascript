@@ -1,26 +1,7 @@
-import { screenClicker } from './from-event/fromEvent';
-import { observableToObserver } from './observable-binding/observableBinding';
-import { 
-    subjectExampleSubscribeCollection,
-    subscribeObservableToSubjectObserver,
-    mulicastedObservables, 
-    observableSubjectMulticastExample,
-    observableSubjectMyTest,
-    observableReferenceCounting,
-    observableBehaviorSubject,
-    observableSubscribeAsync,
-} from './subject/subjectExersices';
-import { dragAndDrop } from './dragAndDrop/drag-and-drop';
-import { dragAndDropKefir, div } from './kefir-tests/kefir-test';
-// screenClicker();
-// observableToObserver();
-// subjectExampleSubscribeCollection();
-// subscribeObservableToSubjectObserver();
-// mulicastedObservables();
-// observableSubjectMulticastExample();
-// observableSubjectMyTest();
-// observableReferenceCounting();
-// observableBehaviorSubject();
-// observableSubscribeAsync();
-dragAndDrop();
+import { dragAndDropKefir, div, divSecond } from './kefir-tests/kefir-test';
+import { dragAndDropNativeJS, divJS, divJSSecond } from './dnd_native_js/dnd';
+document.body.style.backgroundColor = 'lightcyan';
 dragAndDropKefir(div);
+dragAndDropKefir(divSecond);
+dragAndDropNativeJS(divJS);
+dragAndDropNativeJS(divJSSecond);
